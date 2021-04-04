@@ -69,13 +69,13 @@ const Washes = () => {
                 'total':
                 (item)=>(
                   <td>
-                      {item.subtotal + item.checkupCost}
+                      {item.subtotal + item.checkupCost ?? ''}
                   </td>
                 ),
                 'requestedBy':
                 (item)=>(
                   <td>
-                      {item.userInfo.name}
+                      {item?.userInfo?.name || ''}
                   </td>
                 ),
                 'acceptedBy':
@@ -87,13 +87,13 @@ const Washes = () => {
                 'jobRequestedAt':
                 (item)=>(
                   <td>
-                      {new Date(item.requestedAt).toLocaleString()}
+                      {new Date(item.requestedAt).toLocaleString() || ''}
                   </td>
                 ),
                 'washScheduledAt':
                 (item)=>(
                   <td>
-                      {new Date(item.time).toLocaleString()}
+                      {new Date(item.time).toLocaleString() ?? ''}
                   </td>
                 ),
               }}
