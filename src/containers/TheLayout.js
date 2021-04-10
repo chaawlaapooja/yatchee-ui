@@ -17,6 +17,7 @@ const TheLayout = (props) => {
   
       if(id!==null || id!==''){
         let response = await fetch('https://yatchee.herokuapp.com/checkIfUserExist',{
+          mode: 'no-cors',
           method:'POST',
           body: JSON.stringify({_id:id, checkFor:'admin'}),
           headers: {
