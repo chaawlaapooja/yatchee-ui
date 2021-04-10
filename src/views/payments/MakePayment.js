@@ -63,10 +63,10 @@ const MakePayment = () => {
     response = await response.json()
     if(response==='success'){
         getPayments()
-        addToast('Success', 'Refunded succesfully', 'bg-success')
+        addToast('Success', 'Paid succesfully', 'bg-success')
     }
     else
-        addToast('Error', 'Error refunding', 'bg-error')
+        addToast('Error', 'Error paying', 'bg-error')
   }
   return (
     <>

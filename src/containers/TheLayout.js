@@ -16,7 +16,7 @@ const TheLayout = (props) => {
       let id = window.localStorage.getItem('id')
   
       if(id!==null || id!==''){
-        let response = await fetch('http://localhost:3001/checkIfUserExist',{
+        let response = await fetch('https://yatchee.herokuapp.com/checkIfUserExist',{
           method:'POST',
           body: JSON.stringify({_id:id, checkFor:'admin'}),
           headers: {
